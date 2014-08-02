@@ -9,3 +9,5 @@
 # The following shows how to override the bundler version:
 #
 #normal[:opsworks_bundler][:version] = '1.3.5'
+
+normal[:opsworks_bunder][:executable] = 'NOKOGIRI_USE_SYSTEM_LIBRARIES=true /usr/local/bin/bundle'

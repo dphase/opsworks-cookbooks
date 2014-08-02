@@ -15,6 +15,6 @@
 ###
 
 default[:opsworks_bundler][:version] = '1.5.3'
-default[:opsworks_bundler][:executable] = 'NOKOGIRI_USE_SYSTEM_LIBRARIES=true /usr/local/bin/bundle'
+default[:opsworks_bundler][:executable] = '/usr/local/bin/bundle'
 
 include_attribute "opsworks_bundler::customize"
