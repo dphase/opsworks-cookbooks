@@ -9,3 +9,5 @@
 # The following shows how to override the Unicorn timout:
 #
 #normal[:unicorn][:timeout] = 30
+
+normal[:unicorn][:worker_processes] = 16
