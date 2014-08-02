@@ -10,3 +10,11 @@
 #
 #normal[:opsworks][:deploy_user][:shell] = '/bin/zsh'
 #normal[:opsworks][:deploy_user][:user] = 'deploy'
+
+normal[:opsworks][:rails][:ignore_bundler_groups] = ['test', 'development', 'edi']
+
+normal[:deploy][application][:environment] = {"RAILS_ENV" => deploy[:rails_env],
+                                              "RUBYOPT" => "",
+                                              "NOKOGIRI_USE_SYSTEM_LIBRARIES" => "1",
+                                              "RACK_ENV" => deploy[:rails_env],
+                                              "HOME" => node[:deploy][application][:home]}
